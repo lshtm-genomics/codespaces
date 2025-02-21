@@ -5,6 +5,15 @@ FROM mcr.microsoft.com/devcontainers/miniconda:0-3
 COPY .devcontainer/env.txt /tmp/conda-tmp/
 RUN /opt/conda/bin/conda create --name mapping --file /tmp/conda-tmp/env.txt && rm -rf /tmp/conda-tmp
 
+# change directory
+WORKDIR $HOME
+RUN wget https://genomics.lshtm.ac.uk/course_data_v1.2.tgz
+RUN tar -xvzf course_data_v1.2.tgz
+RUN rm course_data_v1.2.tgz
+WORKDIR $HOME/data/
+RUN rm -r eqtl gwas malaria metagenomics methylation nanopore_activity phylogenetics tradis transcriptomics
+WORKDIR $HOME
+
 # [Optional] Uncomment to install a different version of Python than the default
 # RUN conda install -y python=3.6 \
 #     && pip install --no-cache-dir pipx \
