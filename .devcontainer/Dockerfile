@@ -8,10 +8,9 @@ RUN /opt/conda/bin/conda create --name mapping --file /tmp/conda-tmp/env.txt && 
 # change to user vscode 
 USER vscode
 # change directory
-WORKDIR $HOME
+WORKDIR /home/vscode
 RUN wget https://genomics.lshtm.ac.uk/data-mapping.v1.3.tgz
 RUN tar -xvzf data-mapping.v1.3.tgz
-RUN rm data-mapping.v1.3.tgz
 
 # [Optional] Uncomment to install a different version of Python than the default
 # RUN conda install -y python=3.6 \
