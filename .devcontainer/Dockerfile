@@ -7,12 +7,9 @@ RUN /opt/conda/bin/conda create --name mapping --file /tmp/conda-tmp/env.txt && 
 
 # change directory
 WORKDIR $HOME
-RUN wget https://genomics.lshtm.ac.uk/course_data_v1.2.tgz
-RUN tar -xvzf course_data_v1.2.tgz
-RUN rm course_data_v1.2.tgz
-WORKDIR $HOME/data/
-RUN rm -r eqtl gwas malaria metagenomics methylation nanopore_activity phylogenetics tradis transcriptomics
-WORKDIR $HOME
+RUN wget https://genomics.lshtm.ac.uk/data-mapping.v1.3.tgz
+RUN tar -xvzf data-mapping.v1.3.tgz
+RUN rm data-mapping.v1.3.tgz
 
 # [Optional] Uncomment to install a different version of Python than the default
 # RUN conda install -y python=3.6 \
