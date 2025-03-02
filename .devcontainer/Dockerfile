@@ -5,10 +5,13 @@ FROM mcr.microsoft.com/devcontainers/miniconda:0-3
 COPY .devcontainer/env.txt /tmp/conda-tmp/
 RUN /opt/conda/bin/conda create --name mapping --file /tmp/conda-tmp/env.txt && rm -rf /tmp/conda-tmp
 
+# change to user vscode 
+USER vscode
 # change directory
 WORKDIR $HOME
 RUN wget https://genomics.lshtm.ac.uk/data-mapping.v1.3.tgz
 RUN tar -xvzf data-mapping.v1.3.tgz
+RUN rm data-mapping.v1.3.tgz
 
 # [Optional] Uncomment to install a different version of Python than the default
 # RUN conda install -y python=3.6 \
