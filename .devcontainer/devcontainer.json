@@ -1,13 +1,14 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/miniconda
 {
-	"name": "Miniconda (Python 3)",
+	"name": "Course",
 	"build": { 
 		"context": "..",
 		"dockerfile": "Dockerfile"
 	},
 	"features": {
-		"ghcr.io/devcontainers/features/desktop-lite:1": {}
+		"ghcr.io/devcontainers/features/desktop-lite:1": {},
+		"ghcr.io/mamba-org/devcontainer-features/micromamba:1": {}
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
