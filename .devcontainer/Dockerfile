@@ -6,7 +6,7 @@ FROM ubuntu:latest
 COPY .devcontainer/env.txt /tmp/conda-tmp/
 USER ubuntu
 WORKDIR /home/ubuntu
-# RUN micromamba shell init -s bash -r /home/ubuntu/.micromamba
+RUN /usr/local/bin/micromamba shell init -s bash -r /home/ubuntu/.micromamba
 # RUN /home/ubuntu/.micromamba/bin/micromamba create --name mapping --file /tmp/conda-tmp/env.txt && rm -rf /tmp/conda-tmp
 # RUN /opt/conda/bin/conda create --name mapping --file /tmp/conda-tmp/env.txt && rm -rf /tmp/conda-tmp
 
