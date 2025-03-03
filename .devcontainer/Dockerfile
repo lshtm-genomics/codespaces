@@ -8,6 +8,7 @@ RUN micromamba create --name test --file /tmp/env.txt && \
     micromamba clean --all --yes
 
 # install sudo 
+USER root
 RUN apt-get update && apt-get install -y sudo top wget
 
 USER mambauser
