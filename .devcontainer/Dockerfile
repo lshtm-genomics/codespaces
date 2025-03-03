@@ -11,8 +11,8 @@ USER mambauser
 # change directory
 WORKDIR /home/mambauser
 RUN micromamba install -y wget 
-# RUN wget https://genomics.lshtm.ac.uk/data-mapping.v1.3.tgz
-# RUN tar -xvzf data-mapping.v1.3.tgz
+RUN /opt/conda/bin/wget https://genomics.lshtm.ac.uk/data-mapping.v1.3.tgz
+RUN tar -xvzf data-mapping.v1.3.tgz
 
 # [Optional] Uncomment to install a different version of Python than the default
 # RUN conda install -y python=3.6 \
