@@ -1,15 +1,15 @@
 FROM mcr.microsoft.com/devcontainers/miniconda:1-3
 
 # install sudo 
-USER root
-RUN apt-get update && apt-get install -y sudo procps wget
+# USER root
+# RUN apt-get update && apt-get install -y sudo procps wget
 
 # Copy environment.yml (if found) to a temp location so we update the environment. Also
 # copy "noop.txt" so the COPY instruction does not fail if no environment.yml exists.
-USER mambauser
-COPY --chown=$MAMBA_USER:$MAMBA_USER .devcontainer/env.txt /tmp/env.txt
-RUN micromamba create --name test --file /tmp/env.txt && \
-    micromamba clean --all --yes
+# USER mambauser
+# COPY --chown=$MAMBA_USER:$MAMBA_USER .devcontainer/env.txt /tmp/env.txt
+# RUN micromamba create --name test --file /tmp/env.txt && \
+#     micromamba clean --all --yes
 
 
 # # change directory
