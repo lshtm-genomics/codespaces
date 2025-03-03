@@ -7,11 +7,14 @@ COPY --chown=$MAMBA_USER:$MAMBA_USER .devcontainer/env.txt /tmp/env.txt
 RUN micromamba create --name test --file /tmp/env.txt && \
     micromamba clean --all --yes
 
+# install sudo 
+RUN apt-get update && apt-get install -y sudo top wget
+
 USER mambauser
 # change directory
 WORKDIR /home/mambauser
-RUN micromamba install -y wget htop git
-RUN /opt/conda/bin/wget https://genomics.lshtm.ac.uk/data-mapping.v1.3.tgz
+
+RUN wget https://genomics.lshtm.ac.uk/data-mapping.v1.3.tgz
 RUN tar -xvzf data-mapping.v1.3.tgz
 
 # [Optional] Uncomment to install a different version of Python than the default
