@@ -5,6 +5,7 @@ WORKDIR /home/vscode
 
 RUN wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
 RUN bash Miniforge3-Linux-x86_64.sh -b
+RUN bash -c "source /home/vscode/miniforge3/etc/profile.d/conda.sh && conda init bash"
 
 # install sudo 
 # USER root
