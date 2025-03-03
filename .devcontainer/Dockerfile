@@ -9,8 +9,8 @@ RUN bash -c "source /home/vscode/miniforge3/etc/profile.d/conda.sh && conda init
 
 # set up conda environment
 COPY .devcontainer/env.txt  /tmp/env.txt
-RUN /home/vscode/miniforge/condabin/mamba create --name test --file /tmp/env.txt && \
-    /home/vscode/miniforge/condabin/mamba clean --all --yes
+RUN /home/vscode/miniforge3/condabin/mamba create --name test --file /tmp/env.txt && \
+    /home/vscode/miniforge3/condabin/mamba clean --all --yes
 
 # Copy environment.yml (if found) to a temp location so we update the environment. Also
 # copy "noop.txt" so the COPY instruction does not fail if no environment.yml exists.
