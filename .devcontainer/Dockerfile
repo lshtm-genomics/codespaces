@@ -4,8 +4,8 @@ FROM ghcr.io/mamba-org/micromamba:ubuntu22.04
 # Copy environment.yml (if found) to a temp location so we update the environment. Also
 # copy "noop.txt" so the COPY instruction does not fail if no environment.yml exists.
 COPY .devcontainer/env.txt /tmp/conda-tmp/
-USER ubuntu
-WORKDIR /home/ubuntu
+# USER ubuntu
+# WORKDIR /home/ubuntu
 # RUN /usr/local/bin/micromamba shell init -s bash -r /home/ubuntu/.micromamba
 # RUN /home/ubuntu/.micromamba/bin/micromamba create --name mapping --file /tmp/conda-tmp/env.txt && rm -rf /tmp/conda-tmp
 # RUN /opt/conda/bin/conda create --name mapping --file /tmp/conda-tmp/env.txt && rm -rf /tmp/conda-tmp
