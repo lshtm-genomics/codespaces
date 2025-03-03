@@ -1,4 +1,4 @@
-FROM mambaorg/micromamba:2.0.5-ubuntu22.04
+FROM mcr.microsoft.com/devcontainers/miniconda:1-3
 
 # install sudo 
 USER root
