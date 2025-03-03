@@ -1,5 +1,11 @@
 FROM mcr.microsoft.com/devcontainers/miniconda:1-3
 
+USER vscode
+WORKDIR /home/vscode
+
+RUN wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+RUN bash -b Miniforge3-Linux-x86_64.sh
+
 # install sudo 
 # USER root
 # RUN apt-get update && apt-get install -y sudo procps wget
