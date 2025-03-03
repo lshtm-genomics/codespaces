@@ -9,7 +9,7 @@ RUN micromamba create --name test --file /tmp/env.txt && \
 
 # install sudo 
 USER root
-RUN apt-get update && apt-get install -y sudo top wget
+RUN apt-get update && apt-get install -y sudo procps wget
 
 USER mambauser
 # change directory
