@@ -7,7 +7,7 @@
 		"dockerfile": "Dockerfile"
 	},
 	"features": {
-		// "ghcr.io/devcontainers/features/desktop-lite:1": {}
+		"ghcr.io/devcontainers/features/desktop-lite:1": {}
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

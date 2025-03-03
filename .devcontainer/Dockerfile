@@ -10,7 +10,7 @@ RUN micromamba create --name test --file /tmp/env.txt && \
 USER mambauser
 # change directory
 WORKDIR /home/mambauser
-RUN micromamba install -y wget 
+RUN micromamba install -y wget htop git
 RUN /opt/conda/bin/wget https://genomics.lshtm.ac.uk/data-mapping.v1.3.tgz
 RUN tar -xvzf data-mapping.v1.3.tgz
 
