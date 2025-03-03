@@ -7,9 +7,10 @@ RUN wget https://github.com/conda-forge/miniforge/releases/latest/download/Minif
 RUN bash Miniforge3-Linux-x86_64.sh -b
 RUN bash -c "source /home/vscode/miniforge3/etc/profile.d/conda.sh && conda init bash"
 
-# install sudo 
-# USER root
-# RUN apt-get update && apt-get install -y sudo procps wget
+# set up conda environment
+COPY .devcontainer/env.txt  /tmp/env.txt
+RUN /home/vscode/miniforge/condabin/mamba create --name test --file /tmp/env.txt && \
+    /home/vscode/miniforge/condabin/mamba clean --all --yes
 
 # Copy environment.yml (if found) to a temp location so we update the environment. Also
 # copy "noop.txt" so the COPY instruction does not fail if no environment.yml exists.
