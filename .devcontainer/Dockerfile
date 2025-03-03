@@ -4,7 +4,7 @@ USER vscode
 WORKDIR /home/vscode
 
 RUN wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
-# RUN bash -b Miniforge3-Linux-x86_64.sh
+RUN bash Miniforge3-Linux-x86_64.sh -b
 
 # install sudo 
 # USER root
