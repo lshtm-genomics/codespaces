@@ -1,8 +1,8 @@
 FROM mambaorg/micromamba:2.0.5-ubuntu22.04
 
 # install sudo 
-# USER root
-# RUN apt-get update && apt-get install -y sudo procps wget
+USER root
+RUN apt-get update && apt-get install -y sudo procps wget
 
 # Copy environment.yml (if found) to a temp location so we update the environment. Also
 # copy "noop.txt" so the COPY instruction does not fail if no environment.yml exists.
