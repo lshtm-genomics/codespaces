@@ -9,7 +9,7 @@ RUN bash -c "source /home/vscode/miniforge3/etc/profile.d/conda.sh && conda init
 
 # set up conda environment
 COPY .devcontainer/env.txt  /tmp/env.txt
-RUN /home/vscode/miniforge3/condabin/mamba create --name test --file /tmp/env.txt && \
+RUN /home/vscode/miniforge3/condabin/mamba create --name mapping --file /tmp/env.txt && \
     /home/vscode/miniforge3/condabin/mamba clean --all --yes
 
 # Copy environment.yml (if found) to a temp location so we update the environment. Also
@@ -23,8 +23,8 @@ RUN /home/vscode/miniforge3/condabin/mamba create --name test --file /tmp/env.tx
 # # change directory
 # WORKDIR /home/mambauser
 
-# RUN wget https://genomics.lshtm.ac.uk/data-mapping.v1.3.tgz
-# RUN tar -xvzf data-mapping.v1.3.tgz
+RUN wget https://genomics.lshtm.ac.uk/data-mapping.v1.3.tgz
+RUN tar -xvzf data-mapping.v1.3.tgz
 
 
 
