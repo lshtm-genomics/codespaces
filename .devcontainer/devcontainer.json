@@ -19,6 +19,10 @@
 		"6080": {
 			"label": "NoVNC"
 		}
+	},
+
+	"containerEnv": {
+		"SHELL": "/bin/bash"
 	}
 
 	// Use 'postCreateCommand' to run commands after the container is created.
