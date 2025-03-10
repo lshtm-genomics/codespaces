@@ -9,3 +9,8 @@ mkdir -p ~/.firefox
 echo "user_pref(\"webgl.force-enabled\", true);" > ~/.firefox/user.js
 # make alias
 echo 'alias "firefox=firefox --profile ~/.firefox/"' >> ~/.bashrc
+
+
+ln -s ~/miniforge3/condabin/mamba ~/bin/mamba
+
+echo 'alias "ca=conda activate"' >> ~/.bashrc
