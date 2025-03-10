@@ -13,14 +13,14 @@ RUN bash -c "source /home/vscode/miniforge3/etc/profile.d/conda.sh && conda init
 
 # set up conda environment
 COPY .devcontainer/env.txt  /tmp/env.txt
-RUN /home/vscode/miniforge3/condabin/mamba create --name mapping --file /tmp/env.txt && \
+RUN /home/vscode/miniforge3/condabin/mamba create --name gwas --file /tmp/env.txt && \
     /home/vscode/miniforge3/condabin/mamba clean --all --yes
 
 
 ### Add data to download here
-# RUN wget https://genomics.lshtm.ac.uk/data-mapping.v1.3.tgz
-# RUN tar -xvzf data-mapping.v1.3.tgz
-
+RUN wget https://genomics.lshtm.ac.uk/data-gwas.v1.3.tgz
+RUN tar -xvzf data-gwas.v1.3.tgz
+RUN rm data-gwas.v1.3.tgz Miniforge3-Linux-x86_64.sh
 
 
 
