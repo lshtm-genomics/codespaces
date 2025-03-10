@@ -20,6 +20,7 @@ RUN /home/vscode/miniforge3/condabin/mamba create --name phylo --file /tmp/env.t
 ## Add data to download here
 RUN wget https://genomics.lshtm.ac.uk/data-phylo.v1.3.tgz
 RUN tar -xvzf data-phylo.v1.3.tgz
+RUN rm data-phylo.v1.3.tgz Miniforge3-Linux-x86_64.sh
 
 
 
