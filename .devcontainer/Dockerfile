@@ -17,9 +17,9 @@ RUN /home/vscode/miniforge3/condabin/mamba create --name phylo --file /tmp/env.t
     /home/vscode/miniforge3/condabin/mamba clean --all --yes
 
 
-### Add data to download here
-# RUN wget https://genomics.lshtm.ac.uk/data-phylo.v1.3.tgz
-# RUN tar -xvzf data-phylo.v1.3.tgz
+## Add data to download here
+RUN wget https://genomics.lshtm.ac.uk/data-phylo.v1.3.tgz
+RUN tar -xvzf data-phylo.v1.3.tgz
 
 
 
