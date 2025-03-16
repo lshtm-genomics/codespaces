@@ -20,7 +20,7 @@ RUN /home/vscode/miniforge3/condabin/mamba create --name day1 --file /tmp/env.tx
 ### Add data to download here
 RUN wget https://genomics.lshtm.ac.uk/data-mapping.v1.3.tgz
 RUN tar -xvzf data-mapping.v1.3.tgz
-
+RUN rm data-mapping.v1.3.tgz Miniforge3-Linux-x86_64.sh
 
 
 
