@@ -11,6 +11,10 @@ echo "user_pref(\"webgl.force-enabled\", true);" > ~/.firefox/user.js
 echo 'alias "firefox=firefox --profile ~/.firefox/"' >> ~/.bashrc
 
 
+ln -s ~/miniforge3/condabin/mamba ~/bin/mamba
+
+echo 'alias "ca=conda activate"' >> ~/.bashrc
+
 
 
 cd ~/git/
