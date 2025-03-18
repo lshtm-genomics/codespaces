@@ -9,3 +9,12 @@ mkdir -p ~/.firefox
 echo "user_pref(\"webgl.force-enabled\", true);" > ~/.firefox/user.js
 # make alias
 echo 'alias "firefox=firefox --profile ~/.firefox/"' >> ~/.bashrc
+
+
+
+
+cd ~/git/
+git clone https://github.com/linfeng-wang/GenomicCourseGPT.git
+mamba create --name chat --file GenomicCourseGPT/linux-env.txt
+printf "cd ~/git/GenomicCourseGPT\n/home/vscode/miniforge3/envs/chat/bin/python chatbot.py\n" > ~/bin/chat
+chmod +x ~/bin/chat
