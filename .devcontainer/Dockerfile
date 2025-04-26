@@ -12,15 +12,17 @@ RUN bash Miniforge3-Linux-x86_64.sh -b
 RUN bash -c "source /home/vscode/miniforge3/etc/profile.d/conda.sh && conda init bash"
 
 # set up conda environment
-COPY .devcontainer/env.txt  /tmp/env.txt
+COPY .devcontainer/nanopore.txt  /tmp/nanopore.txt
+COPY .devcontainer/roary.txt  /tmp/roary.txt
 RUN /home/vscode/miniforge3/condabin/mamba create --name mapping --file /tmp/env.txt && \
+    /home/vscode/miniforge3/condabin/mamba create --name roary --file /tmp/roary.txt && \
     /home/vscode/miniforge3/condabin/mamba clean --all --yes
 
 
 ### Data download
 
-# RUN wget https://genomics.lshtm.ac.uk/data-mapping.v1.3.tgz
-# RUN tar -xvzf data-mapping.v1.3.tgz
+# RUN wget http://genomics.lshtm.ac.uk/nanopore.tar.gz
+# RUN tar -xvzf nanopore.tar.gz
 
 
 
