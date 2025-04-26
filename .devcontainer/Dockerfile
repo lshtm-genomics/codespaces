@@ -23,7 +23,7 @@ RUN /home/vscode/miniforge3/condabin/mamba create --name nanopore --file /tmp/na
 
 # RUN wget http://genomics.lshtm.ac.uk/nanopore.tar.gz
 # RUN tar -xvzf nanopore.tar.gz
-
+# RUN rm nanopore.tgz Miniforge3-Linux-x86_64.sh
 
 
 

@@ -18,6 +18,7 @@ https://conda.anaconda.org/conda-forge/linux-64/_openmp_mutex-4.5-2_gnu.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/fonts-conda-forge-1-0.tar.bz2
 https://conda.anaconda.org/bioconda/linux-64/parallel-20170422-pl5.22.0_0.tar.bz2
 https://conda.anaconda.org/bioconda/linux-64/perl-app-cpanminus-1.7043-pl5.22.0_0.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-dbi-1.641-pl5.22.0_0.tar.bz2
 https://conda.anaconda.org/bioconda/linux-64/perl-digest-hmac-1.03-pl5.22.0_1.tar.bz2
 https://conda.anaconda.org/bioconda/linux-64/perl-file-spec-3.48_01-pl5.22.0_0.tar.bz2
 https://conda.anaconda.org/bioconda/linux-64/perl-findbin-1.51-pl5.22.0_0.tar.bz2
@@ -94,6 +95,7 @@ https://conda.anaconda.org/conda-forge/linux-64/readline-8.2-h8c095d6_2.conda
 https://conda.anaconda.org/conda-forge/linux-64/unzip-6.0-h7f98852_3.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/xz-gpl-tools-5.8.1-hbcc6ac9_0.conda
 https://conda.anaconda.org/conda-forge/linux-64/xz-tools-5.8.1-hb9d3cd8_0.conda
+https://conda.anaconda.org/bioconda/linux-64/bamtools-2.5.2-hdcf5f25_5.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/gcc_impl_linux-64-14.2.0-hdb7739f_2.conda
 https://conda.anaconda.org/conda-forge/linux-64/icu-69.1-h9c3ff4c_0.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/krb5-1.20.1-hf9c8cef_0.conda
@@ -120,6 +122,7 @@ https://conda.anaconda.org/conda-forge/linux-64/boost-cpp-1.74.0-h6cacc03_7.tar.
 https://conda.anaconda.org/bioconda/linux-64/emboss-6.5.7-ha92aebf_5.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/freetype-2.12.1-h267a509_2.conda
 https://conda.anaconda.org/conda-forge/linux-64/gettext-0.23.1-h5888daf_0.conda
+https://conda.anaconda.org/bioconda/linux-64/k8-0.2.5-hdcf5f25_4.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/libclang-13.0.1-default_hb5137d0_10.conda
 https://conda.anaconda.org/conda-forge/linux-64/libglib-2.80.2-hf974151_0.conda
 https://conda.anaconda.org/conda-forge/linux-64/libopenblas-0.3.25-pthreads_h413a1c8_0.conda
@@ -141,6 +144,7 @@ https://conda.anaconda.org/conda-forge/linux-64/libblas-3.9.0-20_linux64_openbla
 https://conda.anaconda.org/conda-forge/linux-64/libllvm15-15.0.3-h503ea73_0.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/libxkbcommon-1.0.3-he3ba5ed_0.tar.bz2
 https://conda.anaconda.org/bioconda/noarch/minced-0.4.2-hdfd78af_1.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/minimap2-2.28-he4a0461_3.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/openjpeg-2.4.0-hb52868f_1.tar.bz2
 https://conda.anaconda.org/bioconda/linux-64/perl-io-socket-ssl-2.024-0.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/python-3.6.15-hb7a2778_0_cpython.tar.bz2
@@ -215,6 +219,7 @@ https://conda.anaconda.org/conda-forge/noarch/pip-21.3.1-pyhd8ed1ab_0.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/pygments-2.14.0-pyhd8ed1ab_0.conda
 https://conda.anaconda.org/conda-forge/linux-64/scipy-1.5.3-py36h81d768a_1.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/terminado-0.12.1-py36h5fab9bb_0.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/augustus-3.2.2-0.tar.bz2
 https://conda.anaconda.org/bioconda/linux-64/blast-2.5.0-hc0b0e79_3.tar.bz2
 https://conda.anaconda.org/bioconda/linux-64/chopper-0.9.0-hdcf5f25_1.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/jupyter_client-7.1.2-pyhd8ed1ab_0.tar.bz2
@@ -226,6 +231,7 @@ https://conda.anaconda.org/conda-forge/noarch/seaborn-base-0.11.2-pyhd8ed1ab_0.t
 https://conda.anaconda.org/conda-forge/linux-64/statsmodels-0.12.2-py36he33b4a0_0.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/wcwidth-0.2.10-pyhd8ed1ab_0.conda
 https://conda.anaconda.org/bioconda/linux-64/abricate-0.5-ha92aebf_2.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/busco-2.0.1-py36_0.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/nbclient-0.5.9-pyhd8ed1ab_0.tar.bz2
 https://conda.anaconda.org/bioconda/linux-64/perl-xml-simple-2.22-0.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/prompt-toolkit-3.0.36-pyha770c72_0.conda
