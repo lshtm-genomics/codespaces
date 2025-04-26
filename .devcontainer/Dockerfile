@@ -13,17 +13,15 @@ RUN bash -c "source /home/vscode/miniforge3/etc/profile.d/conda.sh && conda init
 
 # set up conda environment
 COPY .devcontainer/nanopore.txt  /tmp/nanopore.txt
-COPY .devcontainer/roary.txt  /tmp/roary.txt
 RUN /home/vscode/miniforge3/condabin/mamba create --name nanopore --file /tmp/nanopore.txt && \
-    /home/vscode/miniforge3/condabin/mamba create --name roary --file /tmp/roary.txt && \
     /home/vscode/miniforge3/condabin/mamba clean --all --yes
 
 
 ### Data download
 
-RUN wget http://genomics.lshtm.ac.uk/nanopore.tar.gz
-RUN tar -xvzf nanopore.tar.gz
-RUN rm nanopore.tgz Miniforge3-Linux-x86_64.sh
+RUN wget http://genomics.lshtm.ac.uk/nanopore_v2.tar.gz
+RUN tar -xvzf nanopore_v2.tar.gz
+RUN rm nanopore_v2.tar.gz Miniforge3-Linux-x86_64.sh
 
 
 
