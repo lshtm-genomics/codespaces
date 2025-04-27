@@ -22,6 +22,3 @@ git clone https://github.com/linfeng-wang/GenomicCourseGPT.git
 mamba create --name chat --file GenomicCourseGPT/linux-env.txt
 printf "cd ~/git/GenomicCourseGPT\n/home/vscode/miniforge3/envs/chat/bin/python chatbot.py\n" > ~/bin/chat
 chmod +x ~/bin/chat
-
-echo "alias mamba=/home/vscode/miniforge3/bin/mamba" >> ~/.bashrc
-echo "alias ca=/home/vscode/miniforge3/bin/conda activate" >> ~/.bashrc
