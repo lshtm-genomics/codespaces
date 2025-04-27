@@ -15,10 +15,6 @@ ln -s ~/miniforge3/condabin/mamba ~/bin/mamba
 
 echo 'alias "ca=conda activate"' >> ~/.bashrc
 
-
-
-cd ~/git/
-git clone https://github.com/linfeng-wang/GenomicCourseGPT.git
-mamba create --name chat --file GenomicCourseGPT/linux-env.txt
-printf "cd ~/git/GenomicCourseGPT\n/home/vscode/miniforge3/envs/chat/bin/python chatbot.py\n" > ~/bin/chat
-chmod +x ~/bin/chat
+conda config --add channels bioconda
+conda config --add channels conda-forge
+conda config --set channel_priority strict
