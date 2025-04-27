@@ -9,7 +9,7 @@
 	"features": {
 		"ghcr.io/devcontainers/features/desktop-lite:1": {}
 	},
-
+	"workspaceFolder": "/home/vscode",
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [5901, 6080],
 	"portsAttributes": {
