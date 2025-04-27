@@ -122,6 +122,7 @@ https://conda.anaconda.org/conda-forge/linux-64/boost-cpp-1.74.0-h6cacc03_7.tar.
 https://conda.anaconda.org/bioconda/linux-64/emboss-6.5.7-ha92aebf_5.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/freetype-2.12.1-h267a509_2.conda
 https://conda.anaconda.org/conda-forge/linux-64/gettext-0.23.1-h5888daf_0.conda
+https://conda.anaconda.org/conda-forge/linux-64/hdf5-1.10.5-nompi_h5b725eb_1114.tar.bz2
 https://conda.anaconda.org/bioconda/linux-64/k8-0.2.5-hdcf5f25_4.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/libclang-13.0.1-default_hb5137d0_10.conda
 https://conda.anaconda.org/conda-forge/linux-64/libglib-2.80.2-hf974151_0.conda
@@ -178,6 +179,7 @@ https://conda.anaconda.org/conda-forge/noarch/send2trash-1.8.2-pyh41d4057_0.cond
 https://conda.anaconda.org/conda-forge/noarch/six-1.16.0-pyh6c4a22f_0.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/tenacity-8.2.2-pyhd8ed1ab_0.conda
 https://conda.anaconda.org/conda-forge/noarch/testpath-0.6.0-pyhd8ed1ab_0.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/tqdm-4.7.2-py36_0.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/typing_extensions-4.1.1-pyha770c72_0.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/webencodings-0.5.1-pyhd8ed1ab_2.conda
 https://conda.anaconda.org/conda-forge/noarch/wheel-0.37.1-pyhd8ed1ab_0.tar.bz2
@@ -210,11 +212,12 @@ https://conda.anaconda.org/conda-forge/linux-64/boost-1.74.0-py36h355b2fd_3.tar.
 https://conda.anaconda.org/conda-forge/linux-64/clang-15.0.3-ha770c72_0.tar.bz2
 https://conda.anaconda.org/bioconda/linux-64/flye-2.9.2-py36h7281c5b_1.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/gst-plugins-base-1.20.3-h57caac4_2.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/h5py-2.10.0-nompi_py36h513d04c_102.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/jinja2-3.0.3-pyhd8ed1ab_0.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/jsonschema-4.1.2-pyhd8ed1ab_0.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/jupyter_core-4.8.1-py36h5fab9bb_0.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/matplotlib-base-3.3.4-py36hd391965_0.tar.bz2
-https://conda.anaconda.org/conda-forge/linux-64/pandas-1.1.5-py36h284efc9_0.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/pandas-0.25.3-py36hb3f55d8_0.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/patsy-0.5.6-pyhd8ed1ab_0.conda
 https://conda.anaconda.org/bioconda/linux-64/perl-xml-parser-2.44-4.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/pip-21.3.1-pyhd8ed1ab_0.tar.bz2
