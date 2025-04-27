@@ -23,4 +23,6 @@ mamba create --name chat --file GenomicCourseGPT/linux-env.txt
 printf "cd ~/git/GenomicCourseGPT\n/home/vscode/miniforge3/envs/chat/bin/python chatbot.py\n" > ~/bin/chat
 chmod +x ~/bin/chat
 
-echo "alias mamba=/home/vscode/miniforge3/bin/mamba" >> ~/.bashrc
+conda config --add channels bioconda
+conda config --add channels conda-forge
+conda config --set channel_priority strict
