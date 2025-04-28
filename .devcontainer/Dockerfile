@@ -13,8 +13,8 @@ RUN bash -c "source /home/vscode/miniforge3/etc/profile.d/conda.sh && conda init
 
 # set up conda environment
 COPY .devcontainer/env.txt  /tmp/assembly.txt
-RUN /home/vscode/miniforge3/condabin/mamba create --name mapping --file /tmp/busco.txt && \
-    /home/vscode/miniforge3/condabin/mamba create --name roary --file /tmp/assembly.txt && \
+RUN /home/vscode/miniforge3/condabin/mamba create --name busco --file /tmp/busco.txt && \
+    /home/vscode/miniforge3/condabin/mamba create --name assembly --file /tmp/assembly.txt && \
     /home/vscode/miniforge3/condabin/mamba clean --all --yes
 
 
