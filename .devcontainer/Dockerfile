@@ -21,6 +21,6 @@ RUN /home/vscode/miniforge3/condabin/mamba create --name busco --file /tmp/busco
 
 ### Data download
 
-RUN wget http://genomics.lshtm.ac.uk/assembly_thirdgen.tar.gz
-RUN tar -xvzf assembly_thirdgen.tar.gz
-RUN rm assembly_thirdgen.tar.gz Miniforge3-Linux-x86_64.sh
+RUN wget http://genomics.lshtm.ac.uk/assembly.tar.gz
+RUN tar -xvzf assembly.tar.gz
+RUN rm assembly.tar.gz Miniforge3-Linux-x86_64.sh
