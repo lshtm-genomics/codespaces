@@ -19,6 +19,6 @@ RUN /home/vscode/miniforge3/condabin/mamba create --name roary --file /tmp/env.t
 
 ### Data download
 
-RUN wget http://genomics.lshtm.ac.uk/pangenomics.tar.gz
-RUN tar -xvzf pangenomics.tar.gz
-RUN rm pangenomics.tar.gz Miniforge3-Linux-x86_64.sh
+RUN wget http://genomics.lshtm.ac.uk/pangenome.tar.gz
+RUN tar -xvzf pangenome.tar.gz
+RUN rm pangenome.tar.gz Miniforge3-Linux-x86_64.sh
