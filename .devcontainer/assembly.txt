@@ -4,7 +4,7 @@
 @EXPLICIT
 https://conda.anaconda.org/conda-forge/linux-64/_libgcc_mutex-0.1-conda_forge.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/_r-mutex-1.0.1-anacondar_1.tar.bz2
-https://conda.anaconda.org/conda-forge/noarch/ca-certificates-2025.1.31-hbd8a1cb_1.conda
+https://conda.anaconda.org/conda-forge/noarch/ca-certificates-2025.4.26-hbd8a1cb_0.conda
 https://conda.anaconda.org/conda-forge/noarch/font-ttf-dejavu-sans-mono-2.37-hab24e00_0.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/font-ttf-inconsolata-3.000-h77eed37_0.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/font-ttf-source-code-pro-2.038-h77eed37_0.tar.bz2
@@ -301,6 +301,7 @@ https://conda.anaconda.org/conda-forge/linux-64/qt-main-5.15.15-h993ce98_3.conda
 https://conda.anaconda.org/bioconda/noarch/artemis-18.2.0-hdfd78af_0.tar.bz2
 https://conda.anaconda.org/bioconda/noarch/fastqc-0.12.1-hdfd78af_0.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/gnuplot-5.4.10-hb1719d7_0.conda
+https://conda.anaconda.org/bioconda/noarch/pilon-1.24-hdfd78af_0.tar.bz2
 https://conda.anaconda.org/bioconda/linux-64/quast-5.3.0-py312pl5321hdcc493e_1.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/r-base-4.3.3-h9967228_12.conda
 https://conda.anaconda.org/bioconda/noarch/trimmomatic-0.39-hdfd78af_2.tar.bz2
