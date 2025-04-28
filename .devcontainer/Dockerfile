@@ -12,15 +12,13 @@ RUN bash Miniforge3-Linux-x86_64.sh -b
 RUN bash -c "source /home/vscode/miniforge3/etc/profile.d/conda.sh && conda init bash"
 
 # set up conda environment
-COPY .devcontainer/assembly.txt  /tmp/assembly.txt
 COPY .devcontainer/busco.txt  /tmp/busco.txt
-RUN /home/vscode/miniforge3/condabin/mamba create --name busco --file /tmp/busco.txt && \
-    /home/vscode/miniforge3/condabin/mamba create --name assembly --file /tmp/assembly.txt && \
+RUN /home/vscode/miniforge3/condabin/mamba create --name dorado --file /tmp/busco.txt && \
     /home/vscode/miniforge3/condabin/mamba clean --all --yes
 
 
 ### Data download
 
-RUN wget http://genomics.lshtm.ac.uk/assembly_thirdgen.tar.gz
-RUN tar -xvzf assembly_thirdgen.tar.gz
-RUN rm assembly_thirdgen.tar.gz Miniforge3-Linux-x86_64.sh
+RUN wget http://genomics.lshtm.ac.uk/dorado.tar.gz
+RUN tar -xvzf dorado.tar.gz
+RUN rm dorado.tar.gz Miniforge3-Linux-x86_64.sh
