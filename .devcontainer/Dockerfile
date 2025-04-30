@@ -12,15 +12,13 @@ RUN bash Miniforge3-Linux-x86_64.sh -b
 RUN bash -c "source /home/vscode/miniforge3/etc/profile.d/conda.sh && conda init bash"
 
 # set up conda environment
-COPY .devcontainer/assembly.txt  /tmp/assembly.txt
-COPY .devcontainer/busco.txt  /tmp/busco.txt
-RUN /home/vscode/miniforge3/condabin/mamba create --name busco --file /tmp/busco.txt && \
-    /home/vscode/miniforge3/condabin/mamba create --name assembly --file /tmp/assembly.txt && \
+COPY .devcontainer/task.txt  /tmp/task.txt
+RUN /home/vscode/miniforge3/condabin/mamba create --name task --file /tmp/task.txt && \
     /home/vscode/miniforge3/condabin/mamba clean --all --yes
 
 
 ### Data download
 
-RUN wget http://genomics.lshtm.ac.uk/assembly.tar.gz
-RUN tar -xvzf assembly.tar.gz
-RUN rm assembly.tar.gz Miniforge3-Linux-x86_64.sh
+RUN wget http://genomics.lshtm.ac.uk/test.tar.gz
+RUN tar -xvzf test.tar.gz
+RUN rm test.tar.gz Miniforge3-Linux-x86_64.sh
