@@ -18,3 +18,6 @@ echo 'alias "ca=conda activate"' >> ~/.bashrc
 conda config --add channels bioconda
 conda config --add channels conda-forge
 conda config --set channel_priority strict
+
+mkdir -p ~/.igv
+echo '-Dsun.java2d.xrender=false'  >> ~/.igv/java_arguments
