@@ -21,5 +21,3 @@ conda config --set channel_priority strict
 
 mkdir -p ~/.igv
 echo '-Dsun.java2d.xrender=false'  >> ~/.igv/java_arguments
-
-mamba create -n igv -c bioconda igv
