@@ -18,9 +18,9 @@ RUN /home/vscode/miniforge3/condabin/mamba create --name gwas --file /tmp/env.tx
 
 
 ### Add data to download here
-RUN wget https://genomics.lshtm.ac.uk/data-gwas.v1.3.tgz
-RUN tar -xvzf data-gwas.v1.3.tgz
-RUN rm data-gwas.v1.3.tgz Miniforge3-Linux-x86_64.sh
+RUN wget https://genomics.lshtm.ac.uk/gwas_data_v3.tar.gz
+RUN tar -xvzf gwas_data_v3.tar.gz
+RUN rm gwas_data_v3.tar.gz Miniforge3-Linux-x86_64.sh
 
 
 
