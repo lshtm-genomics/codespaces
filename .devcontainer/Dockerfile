@@ -19,8 +19,8 @@ RUN /home/vscode/miniforge3/condabin/mamba create --name mapping --file /tmp/env
 
 ### Data download
 
-# RUN wget https://genomics.lshtm.ac.uk/data-mapping.v1.3.tgz
-# RUN tar -xvzf data-mapping.v1.3.tgz
+RUN wget https://genomics.lshtm.ac.uk/linux_hunt.tar.gz
+RUN tar -xvzf linux_hunt.tar.gz
 
 
 
