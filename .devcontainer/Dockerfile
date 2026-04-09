@@ -13,14 +13,14 @@ RUN bash -c "source /home/vscode/miniforge3/etc/profile.d/conda.sh && conda init
 
 # set up conda environment
 COPY .devcontainer/env.txt  /tmp/env.txt
-RUN /home/vscode/miniforge3/condabin/mamba create --name mapping --file /tmp/env.txt && \
+RUN /home/vscode/miniforge3/condabin/mamba create --name ml-amr --file /tmp/env.txt && \
     /home/vscode/miniforge3/condabin/mamba clean --all --yes
 
 
 ### Data download
 
-# RUN wget https://genomics.lshtm.ac.uk/data-mapping.v1.3.tgz
-# RUN tar -xvzf data-mapping.v1.3.tgz
+# RUN wget https://genomics.lshtm.ac.uk/machine_learning.tgz
+# RUN tar -xvzf machine_learning.tgz
 
 
 
