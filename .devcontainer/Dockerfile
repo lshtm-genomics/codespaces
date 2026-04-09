@@ -19,8 +19,8 @@ RUN /home/vscode/miniforge3/condabin/mamba create --name ml-amr --file /tmp/env.
 
 ### Data download
 
-RUN wget https://genomics.lshtm.ac.uk/machine_learning.tgz
-RUN tar -xvzf machine_learning.tgz
+RUN wget https://genomics.lshtm.ac.uk/machine_learning.tar.gz
+RUN tar -xvzf machine_learning.tar.gz
 
 
 
