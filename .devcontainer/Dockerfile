@@ -23,4 +23,4 @@ RUN /home/vscode/miniforge3/condabin/mamba create --name busco --file /tmp/busco
 
 RUN wget http://genomics.lshtm.ac.uk/assembly.tar.gz
 RUN tar -xvzf assembly.tar.gz
-#RUN rm assembly.tar.gz Miniforge3-Linux-x86_64.sh
+RUN rm assembly.tar.gz Miniforge3-Linux-x86_64.sh
