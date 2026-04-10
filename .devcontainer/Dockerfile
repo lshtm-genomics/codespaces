@@ -1,25 +1,25 @@
 FROM mcr.microsoft.com/devcontainers/miniconda:1-3
-# [Optional] Uncomment this section to install additional OS packages.
+
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends firefox-esr gnumeric qpdfview file
+    && apt-get -y install --no-install-recommends firefox-esr gnumeric qpdfview file wget \
+    && apt-get clean
 
 USER vscode
 WORKDIR /home/vscode
 
-RUN wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
-RUN bash Miniforge3-Linux-x86_64.sh -b
-RUN bash -c "source /home/vscode/miniforge3/etc/profile.d/conda.sh && conda init bash"
+RUN wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh && \
+    bash Miniforge3-Linux-x86_64.sh -b && \
+    rm Miniforge3-Linux-x86_64.sh
 
-# set up conda environment
-COPY .devcontainer/assembly.txt  /tmp/assembly.txt
-COPY .devcontainer/busco.txt  /tmp/busco.txt
-RUN /home/vscode/miniforge3/condabin/mamba create --name busco --file /tmp/busco.txt && \
-    /home/vscode/miniforge3/condabin/mamba create --name assembly --file /tmp/assembly.txt && \
-    /home/vscode/miniforge3/condabin/mamba clean --all --yes
+ENV PATH="/home/vscode/miniforge3/bin:/home/vscode/miniforge3/condabin:${PATH}"
 
+COPY .devcontainer/assembly.txt /tmp/assembly.txt
+COPY .devcontainer/busco.txt /tmp/busco.txt
 
-### Data download
+RUN mamba create -y -n busco --file /tmp/busco.txt && \
+    mamba create -y -n assembly --file /tmp/assembly.txt && \
+    mamba clean --all -y
 
-RUN wget http://genomics.lshtm.ac.uk/assembly.tar.gz
-    tar -xvzf assembly.tar.gz
+RUN wget http://genomics.lshtm.ac.uk/assembly.tar.gz && \
+    tar -xvzf assembly.tar.gz && \
     rm assembly.tar.gz
