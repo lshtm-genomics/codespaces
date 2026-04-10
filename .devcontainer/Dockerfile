@@ -1,3 +1,4 @@
+FROM mcr.microsoft.com/devcontainers/miniconda:1-3
 # [Optional] Uncomment this section to install additional OS packages.
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends firefox-esr gnumeric qpdfview file
