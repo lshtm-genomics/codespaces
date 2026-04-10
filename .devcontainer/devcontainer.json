@@ -20,5 +20,5 @@
 	"containerEnv": {
 		"SHELL": "/bin/bash"
 	},
-	"postCreateCommand": "bash /workspaces/codespaces/.devcontainer/get-non-conda-software.sh && /home/vscode/miniforge3/condabin/mamba create --name microbiome --file /tmp/env.txt && /home/vscode/miniforge3/condabin/mamba clean --all --yes --force-pkgs-dirs"
+	"postCreateCommand": "bash /workspaces/codespaces/.devcontainer/get-non-conda-software.sh"
 }
