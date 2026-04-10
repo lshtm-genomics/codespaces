@@ -14,7 +14,7 @@ RUN bash -c "source /home/vscode/miniforge3/etc/profile.d/conda.sh && conda init
 COPY .devcontainer/assembly.txt  /tmp/assembly.txt
 COPY .devcontainer/busco.txt  /tmp/busco.txt
 RUN /home/vscode/miniforge3/condabin/mamba create --name busco --file /tmp/busco.txt && \
-    /home/vscode/miniforge3/condabin/mamba create --name assembly --file /tmp/assembly.txt && \
+    /home/vscode/miniforge3/condabin/mamba env create --name assembly --file /tmp/assembly.txt && \
     /home/vscode/miniforge3/condabin/mamba clean --all --yes
 
 
