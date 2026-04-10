@@ -1,133 +1,131 @@
-name: busco
-channels:
-  - bioconda
-  - conda-forge
-  - defaults
-dependencies:
-  - _openmp_mutex=4.5=20_gnu
-  - augustus=3.3=pl526hcfae127_4
-  - bamtools=2.4.1=1
-  - blas=1.1=openblas
-  - blast=2.10.1=pl526he19e7b1_3
-  - boost=1.67.0=py36_0
-  - boost-cpp=1.67.0=h3a22d5f_0
-  - busco=2.0.1=py36_0
-  - bzip2=1.0.8=hda65f42_9
-  - c-ares=1.11.0=h470a237_1
-  - ca-certificates=2026.2.25=hbd8a1cb_0
-  - curl=7.71.1=he644dc0_8
-  - entrez-direct=24.0=he881be0_0
-  - gmp=6.3.0=hac33072_2
-  - gsl=2.2.1=blas_openblash47a8a8e_5
-  - hmmer=3.4=h503566f_3
-  - icu=58.2=hf484d3e_1000
-  - krb5=1.17.2=h926e7f8_0
-  - ld_impl_linux-64=2.45.1=bootstrap_ha15bf96_2
-  - libamd=3.3.3=h456b2da_7100101
-  - libblas=3.9.0=1_h86c2bf4_netlib
-  - libbtf=2.3.2=hf02c80a_7100101
-  - libcamd=3.3.3=hf02c80a_7100101
-  - libcblas=3.9.0=13_h8e06fc2_netlib
-  - libccolamd=3.3.4=hf02c80a_7100101
-  - libcholmod=5.3.1=h9cf07ce_7100101
-  - libcolamd=3.3.4=hf02c80a_7100101
-  - libcurl=7.71.1=hcdd3856_8
-  - libcxsparse=4.4.1=hf02c80a_7100101
-  - libedit=3.1.20250104=pl5321h7949ede_0
-  - libev=4.33=hd590300_2
-  - libffi=3.4.6=h2dba641_1
-  - libgcc=15.2.0=he0feb66_18
-  - libgcc-ng=15.2.0=h69a702a_18
-  - libgfortran=15.2.0=h69a702a_18
-  - libgfortran-ng=15.2.0=h69a702a_18
-  - libgfortran5=15.2.0=h68bc16d_18
-  - libgomp=15.2.0=he0feb66_18
-  - libidn2=2.3.8=hfac485b_1
-  - libklu=2.3.5=h95ff59c_7100101
-  - liblapack=3.9.0=13_h8876d29_netlib
-  - libldl=3.3.2=hf02c80a_7100101
-  - liblzma=5.8.3=hb03c661_0
-  - liblzma-devel=5.8.3=hb03c661_0
-  - libnghttp2=1.41.0=hab1572f_1
-  - libnsl=2.0.1=hb9d3cd8_1
-  - libparu=1.0.0=hc6afc67_7100101
-  - librbio=4.3.4=hf02c80a_7100101
-  - libspex=3.2.3=h9226d62_7100101
-  - libspqr=4.3.4=h23b7119_7100101
-  - libssh2=1.10.0=ha56f1ee_2
-  - libstdcxx=15.2.0=h934c35e_18
-  - libstdcxx-ng=15.2.0=hdf11a46_18
-  - libsuitesparseconfig=7.10.1=h901830b_7100101
-  - libumfpack=6.3.5=h873dde6_7100101
-  - libunistring=0.9.10=h7f98852_0
-  - libzlib=1.2.11=h166bdaf_1014
-  - lp_solve=5.5.2.11=hd590300_0
-  - metis=5.1.0=hd0bcaf9_1007
-  - mpfr=4.2.2=he0a73b1_0
-  - ncurses=6.5=h2d0b736_3
-  - numpy=1.19.5=py36hfc0c790_2
-  - openblas=0.2.20=8
-  - openssl=1.1.1w=hd590300_0
-  - pcre=8.45=h9c3ff4c_0
-  - perl=5.26.2=h36c2ea0_1008
-  - perl-app-cpanminus=1.7044=pl526_1
-  - perl-archive-tar=2.32=pl526_0
-  - perl-carp=1.38=pl526_3
-  - perl-common-sense=3.74=pl526_2
-  - perl-compress-raw-bzip2=2.087=pl526he1b5a44_0
-  - perl-compress-raw-zlib=2.087=pl526hc9558a2_0
-  - perl-constant=1.33=pl526_1
-  - perl-cpan-meta=2.150010=pl526_0
-  - perl-cpan-meta-requirements=2.140=pl526_0
-  - perl-cpan-meta-yaml=0.018=pl526_0
-  - perl-data-dumper=2.173=pl526_0
-  - perl-dbi=1.642=pl526_0
-  - perl-encode=2.88=pl526_1
-  - perl-exporter=5.72=pl526_1
-  - perl-exporter-tiny=1.002001=pl526_0
-  - perl-extutils-cbuilder=0.280230=pl526_1
-  - perl-extutils-makemaker=7.36=pl526_1
-  - perl-extutils-manifest=1.72=pl526_0
-  - perl-extutils-parsexs=3.35=pl526_0
-  - perl-file-path=2.16=pl526_0
-  - perl-file-temp=0.2304=pl526_2
-  - perl-getopt-long=2.50=pl526_1
-  - perl-io-compress=2.087=pl526he1b5a44_0
-  - perl-io-zlib=1.10=pl526_2
-  - perl-ipc-cmd=1.02=pl526_0
-  - perl-json=4.02=pl526_0
-  - perl-json-pp=4.04=pl526_0
-  - perl-json-xs=2.34=pl526h6bb024c_3
-  - perl-list-moreutils=0.428=pl526_1
-  - perl-list-moreutils-xs=0.428=pl526_0
-  - perl-locale-maketext-simple=0.21=pl526_2
-  - perl-module-build=0.4224=pl526_3
-  - perl-module-corelist=5.20190524=pl526_0
-  - perl-module-load=0.32=pl526_1
-  - perl-module-load-conditional=0.68=pl526_2
-  - perl-module-metadata=1.000036=pl526_0
-  - perl-params-check=0.38=pl526_1
-  - perl-parent=0.236=pl526_1
-  - perl-pathtools=3.75=pl526h14c3975_1
-  - perl-perl-ostype=1.010=pl526_1
-  - perl-scalar-list-utils=1.52=pl526h516909a_0
-  - perl-text-abbrev=1.02=pl526_0
-  - perl-text-parsewords=3.30=pl526_0
-  - perl-types-serialiser=1.0=pl526_2
-  - perl-version=0.9924=pl526_0
-  - perl-xsloader=0.24=pl526_0
-  - perl-yaml=1.29=pl526_0
-  - pip=21.3.1=pyhd8ed1ab_0
-  - python=3.6.15=hb7a2778_0_cpython
-  - python_abi=3.6=2_cp36m
-  - readline=8.3=h853b02a_0
-  - setuptools=58.0.4=py36h5fab9bb_2
-  - sqlite=3.38.5=h4ff8645_0
-  - suitesparse=7.10.1=h5b2951e_7100101
-  - tk=8.6.12=h27826a3_0
-  - wget=1.20.3=ha56f1ee_1
-  - wheel=0.37.1=pyhd8ed1ab_0
-  - xz=5.8.3=ha02ee65_0
-  - xz-gpl-tools=5.8.3=ha02ee65_0
-  - xz-tools=5.8.3=hb03c661_0
-  - zlib=1.2.11=h166bdaf_1014
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: linux-64
+@EXPLICIT
+https://conda.anaconda.org/conda-forge/noarch/ca-certificates-2026.2.25-hbd8a1cb_0.conda
+https://conda.anaconda.org/conda-forge/linux-64/ld_impl_linux-64-2.45.1-bootstrap_ha15bf96_2.conda
+https://conda.anaconda.org/conda-forge/linux-64/libgomp-15.2.0-he0feb66_18.conda
+https://conda.anaconda.org/conda-forge/linux-64/_openmp_mutex-4.5-20_gnu.conda
+https://conda.anaconda.org/conda-forge/linux-64/libgcc-15.2.0-he0feb66_18.conda
+https://conda.anaconda.org/conda-forge/linux-64/bzip2-1.0.8-hda65f42_9.conda
+https://conda.anaconda.org/conda-forge/linux-64/libffi-3.4.6-h2dba641_1.conda
+https://conda.anaconda.org/conda-forge/linux-64/libgcc-ng-15.2.0-h69a702a_18.conda
+https://conda.anaconda.org/conda-forge/linux-64/libgfortran5-15.2.0-h68bc16d_18.conda
+https://conda.anaconda.org/conda-forge/linux-64/liblzma-5.8.3-hb03c661_0.conda
+https://conda.anaconda.org/conda-forge/linux-64/libnsl-2.0.1-hb9d3cd8_1.conda
+https://conda.anaconda.org/conda-forge/linux-64/libstdcxx-15.2.0-h934c35e_18.conda
+https://conda.anaconda.org/conda-forge/linux-64/ncurses-6.5-h2d0b736_3.conda
+https://conda.anaconda.org/bioconda/linux-64/c-ares-1.11.0-h470a237_1.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/hmmer-3.4-h503566f_3.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/libedit-3.1.20250104-pl5321h7949ede_0.conda
+https://conda.anaconda.org/conda-forge/linux-64/libev-4.33-hd590300_2.conda
+https://conda.anaconda.org/conda-forge/linux-64/libgfortran-15.2.0-h69a702a_18.conda
+https://conda.anaconda.org/conda-forge/linux-64/liblzma-devel-5.8.3-hb03c661_0.conda
+https://conda.anaconda.org/conda-forge/linux-64/libstdcxx-ng-15.2.0-hdf11a46_18.conda
+https://conda.anaconda.org/conda-forge/linux-64/libunistring-0.9.10-h7f98852_0.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/libzlib-1.2.11-h166bdaf_1014.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/lp_solve-5.5.2.11-hd590300_0.conda
+https://conda.anaconda.org/conda-forge/linux-64/metis-5.1.0-hd0bcaf9_1007.conda
+https://conda.anaconda.org/conda-forge/linux-64/openssl-1.1.1w-hd590300_0.conda
+https://conda.anaconda.org/conda-forge/linux-64/perl-5.26.2-h36c2ea0_1008.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/readline-8.3-h853b02a_0.conda
+https://conda.anaconda.org/conda-forge/linux-64/xz-gpl-tools-5.8.3-ha02ee65_0.conda
+https://conda.anaconda.org/conda-forge/linux-64/xz-tools-5.8.3-hb03c661_0.conda
+https://conda.anaconda.org/conda-forge/linux-64/gmp-6.3.0-hac33072_2.conda
+https://conda.anaconda.org/conda-forge/linux-64/icu-58.2-hf484d3e_1000.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/libgfortran-ng-15.2.0-h69a702a_18.conda
+https://conda.anaconda.org/conda-forge/linux-64/libidn2-2.3.8-hfac485b_1.conda
+https://conda.anaconda.org/conda-forge/linux-64/libsuitesparseconfig-7.10.1-h901830b_7100101.conda
+https://conda.anaconda.org/conda-forge/linux-64/openblas-0.2.20-8.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/pcre-8.45-h9c3ff4c_0.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-app-cpanminus-1.7044-pl526_1.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-common-sense-3.74-pl526_2.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-compress-raw-bzip2-2.087-pl526he1b5a44_0.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-compress-raw-zlib-2.087-pl526hc9558a2_0.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-constant-1.33-pl526_1.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-data-dumper-2.173-pl526_0.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-dbi-1.642-pl526_0.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-exporter-5.72-pl526_1.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-exporter-tiny-1.002001-pl526_0.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-extutils-makemaker-7.36-pl526_1.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-extutils-manifest-1.72-pl526_0.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-getopt-long-2.50-pl526_1.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-io-zlib-1.10-pl526_2.tar.bz2
+https://conda.anaconda.org/bioconda/noarch/perl-json-pp-4.04-pl526_0.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-locale-maketext-simple-0.21-pl526_2.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-module-load-0.32-pl526_1.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-params-check-0.38-pl526_1.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-parent-0.236-pl526_1.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-scalar-list-utils-1.52-pl526h516909a_0.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-version-0.9924-pl526_0.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-xsloader-0.24-pl526_0.tar.bz2
+https://conda.anaconda.org/bioconda/noarch/perl-yaml-1.29-pl526_0.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/tk-8.6.12-h27826a3_0.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/xz-5.8.3-ha02ee65_0.conda
+https://conda.anaconda.org/conda-forge/linux-64/zlib-1.2.11-h166bdaf_1014.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/bamtools-2.4.1-1.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/blas-1.1-openblas.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/boost-cpp-1.67.0-h3a22d5f_0.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/krb5-1.17.2-h926e7f8_0.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/libamd-3.3.3-h456b2da_7100101.conda
+https://conda.anaconda.org/conda-forge/linux-64/libblas-3.9.0-1_h86c2bf4_netlib.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/libbtf-2.3.2-hf02c80a_7100101.conda
+https://conda.anaconda.org/conda-forge/linux-64/libcamd-3.3.3-hf02c80a_7100101.conda
+https://conda.anaconda.org/conda-forge/linux-64/libccolamd-3.3.4-hf02c80a_7100101.conda
+https://conda.anaconda.org/conda-forge/linux-64/libcolamd-3.3.4-hf02c80a_7100101.conda
+https://conda.anaconda.org/conda-forge/linux-64/libcxsparse-4.4.1-hf02c80a_7100101.conda
+https://conda.anaconda.org/conda-forge/linux-64/libldl-3.3.2-hf02c80a_7100101.conda
+https://conda.anaconda.org/conda-forge/linux-64/libnghttp2-1.41.0-hab1572f_1.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/librbio-4.3.4-hf02c80a_7100101.conda
+https://conda.anaconda.org/conda-forge/linux-64/libssh2-1.10.0-ha56f1ee_2.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/mpfr-4.2.2-he0a73b1_0.conda
+https://conda.anaconda.org/bioconda/linux-64/perl-carp-1.38-pl526_3.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-encode-2.88-pl526_1.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-file-path-2.16-pl526_0.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-io-compress-2.087-pl526he1b5a44_0.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-list-moreutils-xs-0.428-pl526_0.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-module-corelist-5.20190524-pl526_0.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-perl-ostype-1.010-pl526_1.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-text-abbrev-1.02-pl526_0.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-text-parsewords-3.30-pl526_0.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-types-serialiser-1.0-pl526_2.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/sqlite-3.38.5-h4ff8645_0.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/wget-1.20.3-ha56f1ee_1.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/entrez-direct-24.0-he881be0_0.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/gsl-2.2.1-blas_openblash47a8a8e_5.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/libcblas-3.9.0-13_h8e06fc2_netlib.conda
+https://conda.anaconda.org/conda-forge/linux-64/libcurl-7.71.1-hcdd3856_8.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/liblapack-3.9.0-13_h8876d29_netlib.conda
+https://conda.anaconda.org/conda-forge/linux-64/libspex-3.2.3-h9226d62_7100101.conda
+https://conda.anaconda.org/bioconda/linux-64/perl-cpan-meta-requirements-2.140-pl526_0.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-cpan-meta-yaml-0.018-pl526_0.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-file-temp-0.2304-pl526_2.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-json-xs-2.34-pl526h6bb024c_3.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-list-moreutils-0.428-pl526_1.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-module-metadata-1.000036-pl526_0.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-pathtools-3.75-pl526h14c3975_1.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/python-3.6.15-hb7a2778_0_cpython.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/curl-7.71.1-he644dc0_8.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/libcholmod-5.3.1-h9cf07ce_7100101.conda
+https://conda.anaconda.org/bioconda/linux-64/perl-archive-tar-2.32-pl526_0.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-cpan-meta-2.150010-pl526_0.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-json-4.02-pl526_0.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-module-load-conditional-0.68-pl526_2.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/python_abi-3.6-2_cp36m.tar.bz2
+https://conda.anaconda.org/conda-forge/noarch/wheel-0.37.1-pyhd8ed1ab_0.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/blast-2.10.1-pl526he19e7b1_3.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/libklu-2.3.5-h95ff59c_7100101.conda
+https://conda.anaconda.org/conda-forge/linux-64/libspqr-4.3.4-h23b7119_7100101.conda
+https://conda.anaconda.org/conda-forge/linux-64/libumfpack-6.3.5-h873dde6_7100101.conda
+https://conda.anaconda.org/conda-forge/linux-64/numpy-1.19.5-py36hfc0c790_2.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-ipc-cmd-1.02-pl526_0.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/setuptools-58.0.4-py36h5fab9bb_2.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/boost-1.67.0-py36_0.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/libparu-1.0.0-hc6afc67_7100101.conda
+https://conda.anaconda.org/bioconda/linux-64/perl-extutils-cbuilder-0.280230-pl526_1.tar.bz2
+https://conda.anaconda.org/conda-forge/noarch/pip-21.3.1-pyhd8ed1ab_0.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/perl-extutils-parsexs-3.35-pl526_0.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/suitesparse-7.10.1-h5b2951e_7100101.conda
+https://conda.anaconda.org/bioconda/linux-64/perl-module-build-0.4224-pl526_3.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/augustus-3.3-pl526hcfae127_4.tar.bz2
+https://conda.anaconda.org/bioconda/linux-64/busco-2.0.1-py36_0.tar.bz2
