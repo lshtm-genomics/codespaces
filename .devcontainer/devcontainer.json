@@ -10,7 +10,6 @@
 		"ghcr.io/devcontainers/features/desktop-lite:1": {}
 	},
 	"workspaceFolder": "/home/vscode",
-
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [5901, 6080],
 	"portsAttributes": {
@@ -21,17 +20,14 @@
 			"label": "NoVNC"
 		}
 	},
-
 	"containerEnv": {
 		"SHELL": "/bin/bash"
 	},
-
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "bash /workspaces/codespaces/.devcontainer/get-non-conda-software.sh"
-
+	"postCreateCommand": "bash /workspaces/codespaces/.devcontainer/get-non-conda-software.sh && /home/vscode/miniforge3/condabin/mamba create --name microbiome --file /tmp/env.txt && /home/vscode/miniforge3/condabin/mamba clean --all --yes --force-pkgs-dirs"
 	// Configure tool-specific properties.
 	// "customizations": {},
-
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
+}
 }
