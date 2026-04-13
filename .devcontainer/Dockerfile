@@ -12,7 +12,7 @@ COPY .devcontainer/busco.txt /tmp/busco.txt
 
 RUN conda config --add channels conda-forge && \
     conda config --add channels bioconda
-    
+
 RUN bash -c "source /opt/conda/etc/profile.d/conda.sh && conda install -y mamba"
 
 # Initialize conda and create environments
@@ -21,6 +21,7 @@ RUN bash -c "source /opt/conda/etc/profile.d/conda.sh && \
     mamba create -y -n assembly --file /tmp/assembly.txt && \
     mamba clean --all -y"
 
+RUN conda init bash
 
 RUN wget http://genomics.lshtm.ac.uk/assembly.tar.gz && \
     tar -xvzf assembly.tar.gz && \
