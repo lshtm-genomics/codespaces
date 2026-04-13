@@ -8,7 +8,8 @@ USER vscode
 WORKDIR /home/vscode
 
 RUN wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh && \
-    bash Miniforge3-Linux-x86_64.sh -b && \
+    bash Miniforge3-Linux-x86_64.sh -b \
+    bash -c "source /home/vscode/miniforge3/etc/profile.d/conda.sh && conda init bash" \
     rm Miniforge3-Linux-x86_64.sh
 
 ENV PATH="/home/vscode/miniforge3/bin:/home/vscode/miniforge3/condabin:${PATH}"
