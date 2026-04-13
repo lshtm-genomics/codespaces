@@ -10,6 +10,9 @@ WORKDIR /home/vscode
 COPY .devcontainer/assembly.txt /tmp/assembly.txt
 COPY .devcontainer/busco.txt /tmp/busco.txt
 
+RUN conda config --add channels conda-forge && \
+    conda config --add channels bioconda
+    
 RUN bash -c "source /opt/conda/etc/profile.d/conda.sh && conda install -y mamba"
 
 # Initialize conda and create environments
