@@ -21,4 +21,4 @@ RUN bash -c "source /opt/conda/etc/profile.d/conda.sh && \
 
 RUN conda init bash
 
-RUN wwget -O - http://genomics.lshtm.ac.uk/tb_transcriptomics.tar.gz | tar -xv
+RUN wget -O - http://genomics.lshtm.ac.uk/tb_transcriptomics.tar.gz | tar -xv
