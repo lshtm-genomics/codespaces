@@ -21,6 +21,6 @@ RUN bash -c "source /opt/conda/etc/profile.d/conda.sh && \
 
 RUN conda init bash
 
-RUN wget http://genomics.lshtm.ac.uk/phylo_task.tar.gz && \
-    tar -xvzf phylo_task.tar.gz && \
-    rm phylo_task.tar.gz
+# RUN wget http://genomics.lshtm.ac.uk/phylo_task.tar.gz && \
+#     tar -xvzf phylo_task.tar.gz && \
+#     rm phylo_task.tar.gz
