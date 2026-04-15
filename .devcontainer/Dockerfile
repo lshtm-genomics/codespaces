@@ -7,8 +7,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 USER vscode
 WORKDIR /home/vscode
 
-COPY .devcontainer/assembly.txt /tmp/assembly.txt
-COPY .devcontainer/busco.txt /tmp/busco.txt
+COPY .devcontainer/tb_phylo.txt /tmp/tb_phylo.txt
 
 RUN conda config --add channels conda-forge && \
     conda config --add channels bioconda
@@ -17,12 +16,11 @@ RUN bash -c "source /opt/conda/etc/profile.d/conda.sh && conda install -y mamba"
 
 # Initialize conda and create environments
 RUN bash -c "source /opt/conda/etc/profile.d/conda.sh && \
-    mamba create -y -n busco --file /tmp/busco.txt && \
-    mamba create -y -n assembly --file /tmp/assembly.txt && \
+    mamba create -y -n assembly --file /tmp/tb_phylo.txt && \
     mamba clean --all -y"
 
 RUN conda init bash
 
-RUN wget http://genomics.lshtm.ac.uk/assembly.tar.gz && \
-    tar -xvzf assembly.tar.gz && \
-    rm assembly.tar.gz
+RUN wget http://genomics.lshtm.ac.uk/phylo_task.tar.gz && \
+    tar -xvzf phylo_task.tar.gz && \
+    rm phylo_task.tar.gz
