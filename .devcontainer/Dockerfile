@@ -18,8 +18,8 @@ RUN /home/vscode/miniforge3/condabin/mamba create --name methylation --file /tmp
 
 
 ### Add data to download here
-RUN wget https://genomics.lshtm.ac.uk/data-methylation.v1.3.tgz
-RUN tar -xvzf data-methylation.v1.3.tgz
+RUN wget https://genomics.lshtm.ac.uk/data-methylation.v1.4.tgz
+RUN tar -xvzf data-methylation.v1.4.tgz
 
 
 
