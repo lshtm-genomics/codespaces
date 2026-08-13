@@ -12,8 +12,11 @@ RUN bash Miniforge3-Linux-x86_64.sh -b
 RUN bash -c "source /home/vscode/miniforge3/etc/profile.d/conda.sh && conda init bash"
 
 # set up conda environment
+# set up conda environment
 COPY .devcontainer/env.txt  /tmp/env.txt
 RUN /home/vscode/miniforge3/condabin/mamba create --name methylation --file /tmp/env.txt && \
+    /home/vscode/miniforge3/condabin/mamba install -n methylation -y -c conda-forge \
+        matplotlib pandas seaborn && \
     /home/vscode/miniforge3/condabin/mamba clean --all --yes
 
 
