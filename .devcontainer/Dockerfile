@@ -19,8 +19,8 @@ RUN /home/vscode/miniforge3/condabin/mamba create --name mapping --file /tmp/env
 
 ### Data download
 
-# RUN wget https://genomics.lshtm.ac.uk/gwas_ai.tgz
-# RUN tar -xvzf gwas_ai.tgz
+RUN wget https://genomics.lshtm.ac.uk/gwas_ai.tgz
+RUN tar -xvzf gwas_ai.tgz
 
 
 
