@@ -13,7 +13,7 @@ RUN bash -c "source /home/vscode/miniforge3/etc/profile.d/conda.sh && conda init
 
 # set up conda environment
 COPY .devcontainer/env.txt  /tmp/env.txt
-#RUN /home/vscode/miniforge3/condabin/mamba create --name microbiome --file /tmp/env.txt && \
+RUN /home/vscode/miniforge3/condabin/mamba create --name microbiome --file /tmp/env.txt 
  #   /home/vscode/miniforge3/condabin/mamba clean --all --yes --force-pkgs-dirs
 
 
