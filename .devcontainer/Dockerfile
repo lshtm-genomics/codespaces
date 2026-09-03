@@ -1,8 +1,8 @@
 FROM mcr.microsoft.com/devcontainers/miniconda:1-3
 
 # [Optional] Uncomment this section to install additional OS packages.
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends firefox-esr gnumeric qpdfview
+#RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+ #   && apt-get -y install --no-install-recommends firefox-esr gnumeric qpdfview
 
 USER vscode
 WORKDIR /home/vscode
@@ -12,14 +12,25 @@ RUN bash Miniforge3-Linux-x86_64.sh -b
 RUN bash -c "source /home/vscode/miniforge3/etc/profile.d/conda.sh && conda init bash"
 
 # set up conda environment
-COPY .devcontainer/env.txt  /tmp/env.txt
-RUN /home/vscode/miniforge3/condabin/mamba create --name microbiome --file /tmp/env.txt 
+#COPY .devcontainer/env.txt  /tmp/env.txt
+#RUN /home/vscode/miniforge3/condabin/mamba create --name microbiome --file /tmp/env.txt 
  #   /home/vscode/miniforge3/condabin/mamba clean --all --yes --force-pkgs-dirs
 
+# --- packed conda environment (replaces slow `mamba create --file env.txt`) ---
+RUN mkdir -p /home/vscode/miniforge3/envs/microbiome \
+    && wget -qO /tmp/microbiome-env.tar.zst \
+       https://github.com/lshtm-genomics/codespaces/releases/download/v1/microbiome-env.tar.zst \
+    && zstd -d /tmp/microbiome-env.tar.zst -c | tar -xf - -C /home/vscode/miniforge3/envs/microbiome \
+    && rm /tmp/microbiome-env.tar.zst \
+    && /home/vscode/miniforge3/envs/microbiome/bin/conda-unpack
+
+# activate the env by default in new shells
+RUN echo "source /home/vscode/miniforge3/envs/microbiome/bin/activate microbiome" >> /home/vscode/.bashrc
 
 ## Add data to download here
-RUN wget https://genomics.lshtm.ac.uk/data-microbiome.v1.3.tgz
-RUN tar -xvzf data-microbiome.v1.3.tgz
+RUN wget https://genomics.lshtm.ac.uk/data-microbiome.v1.3.tgz \
+    && tar -xvzf data-microbiome.v1.3.tgz
+
 
 
 
