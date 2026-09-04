@@ -13,7 +13,7 @@ RUN bash -c "source /home/vscode/miniforge3/etc/profile.d/conda.sh && conda init
 
 # set up conda environment
 COPY .devcontainer/gwas_ai.txt  /tmp/env.txt
-RUN /home/vscode/miniforge3/condabin/mamba create --name mapping --file /tmp/env.txt && \
+RUN /home/vscode/miniforge3/condabin/mamba create --name gwas_ai --file /tmp/env.txt && \
     /home/vscode/miniforge3/condabin/mamba clean --all --yes
 
 
