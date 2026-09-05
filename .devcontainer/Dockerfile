@@ -16,10 +16,10 @@ RUN conda create --name microbiome python=3.10 -y \
     && echo "conda activate microbiome" >> /home/vscode/.bashrc
 
 # --- canned reference outputs (the "answers" the fake tools copy into place) ---
-RUN mkdir -p /opt/microbiome-canned \
+RUN mkdir -p /home/vscode/microbiome-canned \
     && wget -qO /tmp/canned.tar.zst \
        https://github.com/lshtm-genomics/codespaces/releases/download/v2/microbiome_canned.tar.zst \
-    && zstd -d /tmp/canned.tar.zst -c | tar -xf - -C /opt/microbiome-canned --strip-components=1 \
+    && zstd -d /tmp/canned.tar.zst -c | tar -xf - -C /home/vscode/microbiome-canned --strip-components=1 \
     && rm /tmp/canned.tar.zst
 
 # --- fake qiime / fastqc / multiqc stubs ---
@@ -28,9 +28,9 @@ USER root
 RUN chmod +x /usr/local/bin/qiime /usr/local/bin/fastqc /usr/local/bin/multiqc
 USER vscode
 
-ENV MICROBIOME_CANNED=/opt/microbiome-canned
+ENV MICROBIOME_CANNED=/home/vscode/microbiome-canned
 
 # --- seed the student's working dir with ONLY the real inputs ---
 RUN mkdir -p /home/vscode/data/microbiome \
-    && cp -r /opt/microbiome-canned/fastq /opt/microbiome-canned/db /opt/microbiome-canned/meta.csv \
+    && cp -r /home/vscode/microbiome-canned/fastq /home/vscode/microbiome-canned/db /home/vscode/microbiome-canned/meta.csv \
        /home/vscode/data/microbiome/
