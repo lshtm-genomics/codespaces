@@ -18,12 +18,12 @@ RUN conda create --name microbiome python=3.10 -y \
 # --- canned reference outputs (the "answers" the fake tools copy into place) ---
 RUN mkdir -p /opt/microbiome-canned \
     && wget -qO /tmp/canned.tar.zst \
-       https://github.com/lshtm-genomics/codespaces/releases/download/v2/microbiome-canned.tar.zst \
+       https://github.com/lshtm-genomics/codespaces/releases/download/v2/microbiome_canned.tar.zst \
     && zstd -d /tmp/canned.tar.zst -c | tar -xf - -C /opt/microbiome-canned --strip-components=1 \
     && rm /tmp/canned.tar.zst
 
 # --- fake qiime / fastqc / multiqc stubs ---
-COPY fake-bin/qiime fake-bin/fastqc fake-bin/multiqc /usr/local/bin/
+COPY .devcontainer/fake-bin/qiime .devcontainer/fake-bin/fastqc .devcontainer/fake-bin/multiqc /usr/local/bin/
 USER root
 RUN chmod +x /usr/local/bin/qiime /usr/local/bin/fastqc /usr/local/bin/multiqc
 USER vscode
