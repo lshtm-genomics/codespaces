@@ -1,0 +1,80 @@
+#!/bin/bash
+# Fake qiime — mimics the real CLI's timing and output without any real computation.
+#
+# Delay ranges are randomized per call so back-to-back runs don't feel robotic:
+#   - "slow" subcommands (the ones that genuinely take minutes for real: DADA2
+#     denoising, tree building, core diversity metrics, taxonomic classification)
+#     get a longer randomized wait.
+#   - everything else (import, summarize, tabulate, barplot, significance tests)
+#     gets a short randomized wait, matching how fast they really run.
+#
+# Override ranges (in seconds) via env vars if needed:
+#   QIIME_SLOW_MIN / QIIME_SLOW_MAX   (default 120 / 300  -> 2-5 min)
+#   QIIME_FAST_MIN / QIIME_FAST_MAX   (default 5 / 20)
+
+CANNED="${MICROBIOME_CANNED:-/opt/microbiome-canned}"
+SLOW_MIN="${QIIME_SLOW_MIN:-120}"
+SLOW_MAX="${QIIME_SLOW_MAX:-300}"
+FAST_MIN="${QIIME_FAST_MIN:-5}"
+FAST_MAX="${QIIME_FAST_MAX:-20}"
+
+echo "qiime $*"
+
+plugin="$1"
+action="$2"
+case "$plugin $action" in
+    "dada2 denoise-paired"|\
+    "phylogeny align-to-tree-mafft-fasttree"|\
+    "diversity core-metrics-phylogenetic"|\
+    "feature-classifier classify-sklearn")
+        min=$SLOW_MIN; max=$SLOW_MAX ;;
+    *)
+        min=$FAST_MIN; max=$FAST_MAX ;;
+esac
+delay=$(( RANDOM % (max - min + 1) + min ))
+
+# progress dots while "processing" so it doesn't look frozen
+elapsed=0
+while [[ $elapsed -lt $delay ]]; do
+    step=$(( RANDOM % 5 + 5 ))
+    [[ $((elapsed + step)) -gt $delay ]] && step=$((delay - elapsed))
+    sleep "$step"
+    elapsed=$((elapsed + step))
+    printf "."
+done
+echo ""
+
+args=("$@")
+i=0
+found_any=0
+while [[ $i -lt ${#args[@]} ]]; do
+    key="${args[$i]}"
+    case "$key" in
+        --o-*|--output-path|--output-dir)
+            val="${args[$((i+1))]}"
+            src="$CANNED/$val"
+            if [[ -e "$src" ]]; then
+                destdir="$(dirname "$val")"
+                [[ "$destdir" != "." ]] && mkdir -p "$destdir"
+                if [[ -d "$src" ]]; then
+                    cp -r "$src" "$destdir/"
+                else
+                    cp "$src" "$val"
+                fi
+                echo "Saved as: $val"
+                found_any=1
+            else
+                echo "[fake-qiime WARNING] no canned file found for '$val' (expected at $src)" >&2
+            fi
+            ((i+=2))
+            ;;
+        *)
+            ((i+=1))
+            ;;
+    esac
+done
+
+if [[ $found_any -eq 0 ]]; then
+    echo "[fake-qiime] No output flags matched — nothing copied. Check the command." >&2
+fi
+echo

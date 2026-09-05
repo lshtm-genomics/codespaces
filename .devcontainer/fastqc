@@ -1,0 +1,38 @@
+#!/bin/bash
+# Fake fastqc — mimics `fastqc -o <dir> -q -t <n> fastq/*`
+# Copies pre-made <sample>_fastqc.html / .zip pairs from the canned
+# fastqc_reports/ directory into the requested output directory.
+
+CANNED="${MICROBIOME_CANNED:-/opt/microbiome-canned}"
+DELAY_MIN="${FASTQC_FAKE_DELAY_MIN:-10}"
+DELAY_MAX="${FASTQC_FAKE_DELAY_MAX:-30}"
+DELAY=$(( RANDOM % (DELAY_MAX - DELAY_MIN + 1) + DELAY_MIN ))
+
+outdir="."
+files=()
+
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        -o|--outdir) outdir="$2"; shift 2 ;;
+        -q|--quiet|--extract|--nogroup) shift ;;
+        -t|--threads) shift 2 ;;
+        *) files+=("$1"); shift ;;
+    esac
+done
+
+echo "Started analysis of ${#files[@]} files"
+sleep "$DELAY"
+
+for f in "${files[@]}"; do
+    base="$(basename "$f")"
+    base="${base%.fastq.gz}"
+    for ext in html zip; do
+        src="$CANNED/fastqc_reports/${base}_fastqc.${ext}"
+        if [[ -f "$src" ]]; then
+            cp "$src" "$outdir/"
+        else
+            echo "[fake-fastqc WARNING] no canned report for $base (expected $src)" >&2
+        fi
+    done
+    echo "Analysis complete for $f"
+done
