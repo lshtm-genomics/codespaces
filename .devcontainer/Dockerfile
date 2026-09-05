@@ -18,7 +18,7 @@ RUN conda create --name microbiome python=3.10 -y \
 # --- canned reference outputs (the "answers" the fake tools copy into place) ---
 RUN mkdir -p /opt/microbiome-canned \
     && wget -qO /tmp/canned.tar.zst \
-       https://github.com/lshtm-genomics/codespaces/releases/download/v2/microbiome_canned.tar.zst \
+       https://github.com/lshtm-genomics/codespaces/releases/download/v2/microbiome-canned.tar.zst \
     && zstd -d /tmp/canned.tar.zst -c | tar -xf - -C /opt/microbiome-canned --strip-components=1 \
     && rm /tmp/canned.tar.zst
 
